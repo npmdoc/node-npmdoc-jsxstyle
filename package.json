@@ -1,1 +1,38 @@
-{     "devDependencies": {         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmdoc-jsxstyle",     "homepage": "https://github.com/npmdoc/node-npmdoc-jsxstyle",     "repository": {         "type": "git",         "url": "https://github.com/npmdoc/node-npmdoc-jsxstyle.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### api documentation for  jsxstyle (v1.0.2)  [![npm package](https://img.shields.io/npm/v/npmdoc-jsxstyle.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-jsxstyle) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-jsxstyle.svg)](https://travis-ci.org/npmdoc/node-npmdoc-jsxstyle)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-jsxstyle",
+    "keywords": [
+        "documentation",
+        "jsxstyle"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_jsxstyle.js",
+    "name": "npmdoc-jsxstyle",
+    "nameAlias": "npmdoc_jsxstyle",
+    "nameOriginal": "npmdoc-jsxstyle",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmdoc/node-npmdoc-jsxstyle.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
